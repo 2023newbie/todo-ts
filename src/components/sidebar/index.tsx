@@ -1,8 +1,8 @@
 import React, { FC, ReactElement } from 'react';
 
 import { Grid } from '@mui/material';
-import { Profile } from '../profile';
-import { CreateTaskForm } from '../createTaskForm'
+import { Profile } from './profile';
+import { CreateTaskForm } from './createTaskForm'
 
 export const Sidebar: FC = (): ReactElement => {
   return (
