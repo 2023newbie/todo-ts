@@ -12,7 +12,6 @@ import { emitBorderColorBasedOnPriority } from './helpers/emitBorderColorBasedOn
 
 export const Task: FC<ITask> = (props): ReactElement => {
     const {
-        id,
         title,
         date,
         description,
@@ -41,6 +40,7 @@ export const Task: FC<ITask> = (props): ReactElement => {
             <TaskHeader title={title} date={date} />
             <TaskDescription description={description} />
             <TaskFooter
+                status={status}
                 onStatusChange={onStatusChange}
                 onClick={onClick}
             />

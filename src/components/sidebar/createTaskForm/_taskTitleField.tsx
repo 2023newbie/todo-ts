@@ -8,6 +8,7 @@ export const TaskTitleField: FC<ITextField> = (
     props,
 ): ReactElement => {
     const {
+        value,
         onChange = (e) => console.log(e),
         disabled = false,
     } = props;
@@ -21,6 +22,7 @@ export const TaskTitleField: FC<ITextField> = (
             size="small"
             name="title"
             fullWidth
+            value={value}
             disabled={disabled}
             onChange={onChange}
         />
@@ -28,6 +30,7 @@ export const TaskTitleField: FC<ITextField> = (
 };
 
 TaskTitleField.propTypes = {
+    value: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     disabled: PropTypes.bool
 }

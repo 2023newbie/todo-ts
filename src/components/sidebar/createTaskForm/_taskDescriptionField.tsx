@@ -8,6 +8,7 @@ export const TaskDescriptionField: FC<ITextField> = (
     props,
 ): ReactElement => {
     const {
+        value,
         onChange = (e) => console.log(e),
         disabled = false,
     } = props;
@@ -23,6 +24,7 @@ export const TaskDescriptionField: FC<ITextField> = (
             multiline
             rows={4}
             fullWidth
+            value={value}
             disabled={disabled}
             onChange={onChange}
         />
